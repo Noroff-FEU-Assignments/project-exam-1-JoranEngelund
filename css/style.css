@@ -1,0 +1,33 @@
+/*-- Variables --*/
+
+:root {
+  --main-color: #ffffe5;
+  --main-cta-color: #415d5d;
+  --header-font: "chennai slab";
+  --body-font: "chennai";
+}
+
+/*-- Global Styling --*/
+
+nav,
+ul li,
+h1,
+h2,
+h3 {
+  font-family: var(--header-font);
+}
+
+body {
+  margin: 0;
+  min-width: 100vh;
+  min-height: 100vh;
+}
+
+body,
+header {
+  background: var(--main-color);
+}
+
+p {
+  font-family: var(--body-font);
+}
