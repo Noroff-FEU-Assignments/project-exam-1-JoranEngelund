@@ -12,6 +12,7 @@ async function fetchPostDetails() {
     const details = await response.json();
     console.log(details);
     detailContainer.innerHTML += `<div>
+                                    <img src="${details._embedded?.["wp:featuredmedia"]["0"].href}" />
                                     <h1>${details.title.rendered}</h1>
                                     <h2>Publised: ${details.date}</h2>
                                     <p class="body-copy">${details.content.rendered}

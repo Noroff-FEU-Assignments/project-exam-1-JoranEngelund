@@ -1,8 +1,6 @@
 const postContainer = document.querySelector(".blog-posts");
 
 const url = "https://life-api.engelund.site/wp-json/wp/v2/posts?page=1&_embed";
-const secondUrl =
-  "https://life-api.engelund.site/wp-json/wp/v2/posts?page=2&_embed";
 
 async function fetchPosts() {
   try {
