@@ -82,7 +82,7 @@ a {
 .page-headings {
   text-align: center;
   font-size: 3em;
-  margin: 15px 248px;
+  margin: 40px 248px 0;
 }
 
 .underline-headings {
@@ -100,7 +100,7 @@ a {
 .body-copy {
   font-size: 1.5em;
   text-align: center;
-  margin: 5% 15%;
+  margin: 5% 10%;
 }
 
 /*-- CTA --*/
