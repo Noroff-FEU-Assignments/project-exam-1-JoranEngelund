@@ -38,7 +38,7 @@ header {
   display: flex;
   display: grid;
   grid-template-areas: "logo nav nav";
-  border-bottom: 3px solid #415d5d;
+  border-bottom: 3px solid var(--main-cta-color);
 }
 
 nav {
@@ -86,7 +86,7 @@ a {
 }
 
 .underline-headings {
-  border-bottom: 3px solid grey;
+  border-bottom: 3px solid var(--main-cta-color);
   width: 26%;
   margin: auto;
   text-align: center;
@@ -116,7 +116,7 @@ a {
 .cta:hover {
   background: none;
   color: black;
-  border: 2px solid #415d5d;
+  border: 2px solid var(--main-cta-color);
 }
 
 .cta-container {
@@ -130,7 +130,7 @@ footer {
   display: flex;
   justify-content: center;
   margin-top: auto;
-  border-top: 3px solid #415d5d;
+  border-top: 3px solid var(--main-cta-color);
   font-size: 1.5em;
 }
 
@@ -150,5 +150,5 @@ footer {
 
 .post-card {
   text-align: center;
-  margin: 10px;
+  margin: 20px;
 }
