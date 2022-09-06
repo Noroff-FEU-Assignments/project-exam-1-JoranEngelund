@@ -12,15 +12,21 @@
 nav,
 ul li,
 h1,
-h2,
-h3 {
+h2 {
   font-family: var(--header-font);
+}
+
+h3,
+p {
+  font-family: var(--body-font);
 }
 
 body {
   margin: 0;
-  min-width: 100vh;
   min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 body,
@@ -28,6 +34,121 @@ header {
   background: var(--main-color);
 }
 
-p {
+header {
+  display: flex;
+  display: grid;
+  grid-template-areas: "logo nav nav";
+  border-bottom: 3px solid #415d5d;
+}
+
+nav {
+  grid-area: nav;
+  align-self: end;
+  font-size: 1.5em;
+}
+
+ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.logo-container {
+  grid-area: logo;
+  width: 70%;
+}
+
+.active {
+  text-align: center;
+  color: white;
+  background-color: var(--main-cta-color);
+  padding: 7px 20px;
+  box-shadow: 0px 3px 6px black;
+}
+
+.unactive:hover {
+  text-align: center;
+  color: white;
+  background-color: var(--main-cta-color);
+  padding: 7px 20px;
+  box-shadow: 0px 3px 6px black;
+}
+
+.page-headings {
+  text-align: center;
+  font-size: 3em;
+  margin: 15px 248px;
+}
+
+.underline-headings {
+  border-bottom: 3px solid grey;
+  width: 26%;
+  margin: auto;
+  text-align: center;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+}
+
+.body-copy {
+  font-size: 1.5em;
+  text-align: center;
+  margin: 5% 15%;
+}
+
+/*-- CTA --*/
+.cta {
+  text-align: center;
+  color: white;
+  background-color: var(--main-cta-color);
   font-family: var(--body-font);
+  padding: 7px 44px;
+  box-shadow: 0px 3px 6px black;
+}
+
+.cta:hover {
+  background: none;
+  color: black;
+  border: 2px solid #415d5d;
+}
+
+.cta-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/*-- Footer --*/
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  border-top: 3px solid #415d5d;
+  font-size: 1.5em;
+}
+
+.footer-copy {
+  padding: 10px;
+  color: black;
+}
+
+/*-- blog posts --*/
+
+.blog-posts {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.post-card {
+  text-align: center;
+  margin: 10px;
 }

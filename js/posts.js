@@ -1,4 +1,4 @@
-const carousel = document.querySelector(".carousel");
+const postContainer = document.querySelector(".blog-posts");
 
 const url = "https://life-api.engelund.site/wp-json/wp/v2/posts?page=1&_embed";
 const secondUrl =
@@ -12,7 +12,7 @@ async function fetchPosts() {
     posts.forEach(function (post) {
       const blogImage = post._embedded?.["wp:featuredmedia"][0].source_url;
       const blogImageAlt = post._embedded?.["wp:featuredmedia"][0].alt_text;
-      carousel.innerHTML += `<div class="slide">
+      postContainer.innerHTML += `<div class="post-card">
                               <a href="/post-specific.html?id=${post.id}">
                                 <img class="post-image" src="${blogImage}" alt="${blogImageAlt}"/>
                               </a>
@@ -28,18 +28,3 @@ async function fetchPosts() {
   }
 }
 fetchPosts();
-
-/*
-
-async function secondaryPosts() {
-  try {
-    const response = await fetch(secondUrl);
-    const posts = await response.json();
-    console.log(posts);
-  } catch (error) {
-    console.log("This error is for secondary posts: " + error);
-  }
-}
-
-secondaryPosts();
-*/
