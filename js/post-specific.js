@@ -11,10 +11,16 @@ async function fetchPostDetails() {
     const response = await fetch(url);
     const details = await response.json();
     console.log(details);
-    detailContainer.innerHTML += `<div>
+
+    document.title = `${details.title.rendered} | Life`;
+
+    detailContainer.innerHTML += `
                                     <h1>${details.title.rendered}</h1>
-                                    <p class="body-copy">${details.content.rendered}
-                                  </div>`;
+                                    ${details.content.rendered}
+                                    <div class="cta-container">
+                                <a class="cta" href="/posts.html">View other posts</a>
+                              </div>
+                                    `;
   } catch (error) {
     console.log(error);
   }
