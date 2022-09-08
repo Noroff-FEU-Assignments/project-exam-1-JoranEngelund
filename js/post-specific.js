@@ -27,6 +27,9 @@ async function fetchPostDetails() {
                                   <div class="underline-headings"></div>
                                   <div class="latest-comments">
                                   </div>
+                                  <div class="cta-container">
+                                    <button class="cta" type="button">View less</button>
+                                  </div>
                                   `;
   } catch (error) {
     console.log(error);

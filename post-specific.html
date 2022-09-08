@@ -31,6 +31,31 @@
     </header>
     <main>
       <section class="post-specific"></section>
+      <section class="form">
+        <h2>Leave a Comment</h2>
+        <form
+          action="submit"
+          method="POST"
+          id="comment-form"
+          class="comment-form"
+        >
+          <label for="name"></label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name *"
+            class="form-input"
+          />
+          <textarea
+            id="comment"
+            name="comment"
+            class="form-input"
+            placeholder="Comment *"
+          ></textarea>
+          <button type="submit" class="cta">Send</button>
+        </form>
+      </section>
     </main>
     <footer><a class="footer-copy" href="#">&copy; JayDesign</a></footer>
   </body>
