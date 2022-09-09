@@ -103,9 +103,8 @@ nav ul li a:hover {
   margin: 5% 10%;
 }
 
-/*-- CTA --*/
-.cta,
-.wp-block-button__link {
+/*-- CTA & Buttons --*/
+.cta {
   text-align: center;
   color: white;
   background-color: var(--main-cta-color);
@@ -113,6 +112,27 @@ nav ul li a:hover {
   padding: 7px 44px;
   box-shadow: 0px 3px 6px black;
   border: none;
+}
+
+.view-more-cta {
+  text-align: center;
+  color: white;
+  background-color: var(--main-cta-color);
+  font-family: var(--body-font);
+  padding: 7px 44px;
+  box-shadow: 0px 3px 6px black;
+  border: none;
+  font-size: 1em;
+}
+
+.view-more-cta:hover {
+  background: none;
+  color: black;
+  border: 2px solid var(--main-cta-color);
+}
+
+.view-less-cta {
+  display: none;
 }
 
 .post-specific .cta-container {
@@ -125,15 +145,28 @@ nav ul li a:hover {
   border: 2px solid var(--main-cta-color);
 }
 
-.submit:hover {
-  background: none;
-  color: black;
-  border: 2px solid var(--main-cta-color);
-}
-
 .cta-container {
   text-align: center;
   margin-bottom: 30px;
+}
+
+.hamburger-menu {
+  border: none;
+  background-color: var(--main-color);
+  font-size: 2em;
+  display: none;
+}
+
+.fa-times,
+.fa-bars {
+  display: none;
+  position: fixed;
+  top: 7.7rem;
+  right: 4rem;
+}
+
+.fa-times {
+  right: 4.1rem;
 }
 
 /*-- Footer --*/
@@ -165,6 +198,12 @@ footer {
   margin: 20px;
 }
 
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /*-- Post Specific --*/
 
 .post-specific {
@@ -172,4 +211,32 @@ footer {
   flex-direction: column;
   text-align: center;
   margin: 65px;
+}
+
+/*-- Screen Resize --*/
+
+@media only screen and (max-width: 764px) {
+  .page-headings {
+    font-size: 2.5em;
+  }
+
+  ul {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-color);
+    align-content: center;
+    right: 0px;
+    display: none;
+    top: 195px;
+    height: 234px;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .fa-bars {
+    display: block;
+  }
 }

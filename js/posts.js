@@ -28,13 +28,16 @@ async function fetchPosts() {
 fetchPosts();
 
 const viewMoreBtn = document.querySelector(".view-more-cta");
+const viewLessBtn = document.querySelector(".view-less-cta");
+const viewMoreContainer = document.querySelector(".view-more");
 
 function isTrue() {
   let isClicked = false;
   if (!viewMoreBtn.clicked === true) {
     isClicked = true;
     viewMoreBtn.style.display = "none";
-    const viewMoreContainer = document.querySelector(".view-more");
+    viewLessBtn.style.display = "block";
+
     const page2Url =
       "https://life-api.engelund.site/wp-json/wp/v2/posts?page=2&_embed";
 
@@ -65,4 +68,13 @@ function isTrue() {
   console.log(isClicked);
 }
 
+function viewLess() {
+  if (!viewLessBtn.clicked === true) {
+    viewMoreContainer.innerHTML = "";
+    viewMoreBtn.style.display = "block";
+    viewLessBtn.style.display = "none";
+  }
+}
+
 viewMoreBtn.addEventListener("click", isTrue);
+viewLessBtn.addEventListener("click", viewLess);
