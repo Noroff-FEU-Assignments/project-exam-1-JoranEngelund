@@ -322,7 +322,12 @@ footer {
 @media only screen and (max-width: 570px) {
   /*-- Post Specific --*/
 
+  .post-title {
+    font-size: 1.7em;
+  }
+
   .post-copy {
     margin: auto 20px;
+    font-size: 0.8em;
   }
 }
