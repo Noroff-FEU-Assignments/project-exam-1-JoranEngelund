@@ -157,15 +157,17 @@ nav ul li a:hover {
   display: none;
 }
 
+.fas,
 .fa-times,
+.fas,
 .fa-bars {
-  display: none;
   position: fixed;
   top: 7.7rem;
   right: 4rem;
 }
 
-.fa-times {
+.fas,
+.fas-times {
   right: 4.1rem;
 }
 
@@ -226,8 +228,8 @@ footer {
     flex-direction: column;
     background-color: var(--main-color);
     align-content: center;
-    right: 0px;
     display: none;
+    right: 0px;
     top: 195px;
     height: 234px;
   }
@@ -236,7 +238,12 @@ footer {
     display: block;
   }
 
+  .fas,
   .fa-bars {
     display: block;
+  }
+
+  .fa-times {
+    display: none;
   }
 }
