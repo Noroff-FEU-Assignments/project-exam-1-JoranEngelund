@@ -155,6 +155,9 @@ nav ul li a:hover {
   background-color: var(--main-color);
   font-size: 2em;
   display: none;
+  position: fixed;
+  top: 7.7rem;
+  right: 4rem;
 }
 
 .fas,
@@ -218,10 +221,13 @@ footer {
 /*-- Screen Resize --*/
 
 @media only screen and (max-width: 764px) {
+  /*-- Global Styles --*/
+
   .page-headings {
     font-size: 2.5em;
   }
 
+  /*-- Hamburger Menu --*/
   ul {
     position: fixed;
     display: flex;
@@ -238,7 +244,6 @@ footer {
     display: block;
   }
 
-  .fas,
   .fa-bars {
     display: block;
   }
