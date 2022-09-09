@@ -35,7 +35,12 @@
     </header>
     <main>
       <section class="post-specific"></section>
-      <section class="form">
+      <section class="comments">
+        <h2>Comments</h2>
+        <h3>No comments yet..</h3>
+      </section>
+      <div class="underline-headings"></div>
+      <section class="form-container">
         <h2>Leave a Comment</h2>
         <form
           action="submit"
@@ -43,23 +48,37 @@
           id="comment-form"
           class="comment-form"
         >
-          <label for="name"></label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Name *"
-            class="form-input"
-          />
-          <textarea
-            id="comment"
-            name="comment"
-            class="form-input"
-            placeholder="Comment *"
-          ></textarea>
-          <button type="submit" class="cta">Send</button>
+          <div>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Name *"
+              class="form-input"
+            />
+            <div class="error-message">Must contain minimum 1 letter</div>
+          </div>
+          <div>
+            <textarea
+              id="comment"
+              name="comment"
+              class="form-input"
+              placeholder="Type your comment... *"
+              rows="5"
+              cols="30"
+            ></textarea>
+            <div class="error-message">
+              Must minimum least 1 character / Emoji
+            </div>
+          </div>
+          <div class="cta-container">
+            <button type="submit" class="cta">Send</button>
+          </div>
         </form>
       </section>
+      <div class="cta-container">
+        <a href="/posts.html" class="cta">View other posts</a>
+      </div>
     </main>
     <footer><a class="footer-copy" href="#">&copy; JayDesign</a></footer>
   </body>

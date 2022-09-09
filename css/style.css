@@ -150,7 +150,8 @@ nav ul li a:hover {
   margin-bottom: 30px;
 }
 
-.hamburger-menu {
+.hamburger-menu-open,
+.hamburger-menu-close {
   border: none;
   background-color: var(--main-color);
   font-size: 2em;
@@ -211,11 +212,71 @@ footer {
 
 /*-- Post Specific --*/
 
-.post-specific {
+.post-specific,
+.comments {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: 65px;
+}
+
+.post-specific {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px auto;
+}
+
+.post-title {
+  font-size: 2em;
+}
+
+.postImage {
+  width: 35%;
+}
+
+.post-copy {
+  margin: auto 120px;
+}
+
+.comments h2,
+.form-container h2 {
+  font-size: 1.7em;
+}
+
+/*-- Form Styling --*/
+
+.form-container h2 {
+  text-align: center;
+}
+
+.form-container {
+  margin-bottom: 20px;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 14px;
+}
+
+.form-input {
+  font-family: var(--header-font);
+  color: white;
+  background-color: var(--main-cta-color);
+  border: none;
+  box-shadow: 0 3px 6px black;
+  width: 265px;
+  font-size: 1.1em;
+}
+
+::placeholder {
+  color: white;
+}
+
+.error-message {
+  margin: 10px auto;
+  font-family: var(--body-font);
 }
 
 /*-- Screen Resize --*/
@@ -240,7 +301,8 @@ footer {
     height: 234px;
   }
 
-  .hamburger-menu {
+  .hamburger-menu-open,
+  .hamburger-menu-close {
     display: block;
   }
 
@@ -250,5 +312,17 @@ footer {
 
   .fa-times {
     display: none;
+  }
+
+  .post-copy {
+    margin: auto 43px;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  /*-- Post Specific --*/
+
+  .post-copy {
+    margin: auto 20px;
   }
 }

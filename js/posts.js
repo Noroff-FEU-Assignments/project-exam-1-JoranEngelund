@@ -31,7 +31,7 @@ const viewMoreBtn = document.querySelector(".view-more-cta");
 const viewLessBtn = document.querySelector(".view-less-cta");
 const viewMoreContainer = document.querySelector(".view-more");
 
-function isTrue() {
+function viewMore() {
   let isClicked = false;
   if (!viewMoreBtn.clicked === true) {
     isClicked = true;
@@ -76,5 +76,5 @@ function viewLess() {
   }
 }
 
-viewMoreBtn.addEventListener("click", isTrue);
+viewMoreBtn.addEventListener("click", viewMore);
 viewLessBtn.addEventListener("click", viewLess);

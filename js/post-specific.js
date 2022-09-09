@@ -17,16 +17,14 @@ async function fetchPostDetails() {
     const blogImage = details._embedded?.["wp:featuredmedia"][0].source_url;
     const blogImageAlt = details._embedded?.["wp:featuredmedia"][0].alt_text;
 
-    detailContainer.innerHTML += `<div>
-                                    <img src="${blogImage}" alt="${blogImageAlt}" />
-                                    <h1>${details.title.rendered}</h1>
-                                    <div class="underline-headings"></div>
-                                    <h2>${details.date}</h2>
-                                    <div>${details.content.rendered}</div
+    detailContainer.innerHTML += `
+                                  <img class="postImage" src="${blogImage}" alt="${blogImageAlt}" />
+                                  <h1 class="post-title">${details.title.rendered}</h1>
+                                  <div class="underline-headings"></div>
+                                  <div class="post-copy">${details.content.rendered}</div
                                   </div>
                                   <div class="underline-headings"></div>
-                                  <div class="latest-comments">
-                                  </div>
+                                  <div class="latest-comments"></div>
                                   `;
   } catch (error) {
     console.log(error);

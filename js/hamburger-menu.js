@@ -1,10 +1,12 @@
-const menu = document.querySelector(".hamburger-menu");
-const menuIcon = document.querySelector(".fa-bars");
-const closeIcon = document.querySelector(".fa-times");
+const openMenuContainer = document.querySelector(".hamburger-menu-open");
+const closeMenuContainer = document.querySelector(".hamburger-menu-close");
+const menuIcon = document.querySelectorAll(".fa-bars");
+const closeIcon = document.querySelectorAll(".fa-times");
 const navigation = document.querySelector("ul");
+closeIcon.display = "none";
 
-function hamburgerMenu() {
-  if (!menuIcon.clicked === true) {
+function openMenu() {
+  if (!openMenuContainer.clicked === true) {
     menuIcon.style.display = "none";
     closeIcon.style.display = "block";
     navigation.style.display = "block";
@@ -15,4 +17,4 @@ function hamburgerMenu() {
   }
 }
 
-menuIcon.addEventListener("click", hamburgerMenu);
+openMenuContainer.addEventListener("click", openMenu);
