@@ -63,8 +63,13 @@ a {
 }
 
 .logo-container {
+  display: flex;
   grid-area: logo;
   width: 70%;
+}
+
+.logo {
+  width: 80%;
 }
 
 nav ul li a {
