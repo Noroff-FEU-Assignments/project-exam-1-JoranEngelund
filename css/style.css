@@ -13,8 +13,7 @@ nav,
 ul li,
 h1,
 h2 {
-  font-family: var(--header-font), "Segoe UI", Tahoma, Geneva, Verdana,
-    sans-serif;
+  font-family: var(--header-font);
   font-weight: 100;
 }
 
@@ -22,7 +21,7 @@ h3,
 p,
 .wp-block-post-date,
 .wp-block-latest-comments {
-  font-family: var(--body-font), "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--body-font);
   font-weight: 100;
 }
 
@@ -233,7 +232,6 @@ footer {
 }
 
 .post-title {
-  font-family: var(--header-font), 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
   font-size: 2em;
 }
 
