@@ -233,6 +233,7 @@ footer {
 }
 
 .post-title {
+  font-family: var(--header-font)
   font-size: 2em;
 }
 
