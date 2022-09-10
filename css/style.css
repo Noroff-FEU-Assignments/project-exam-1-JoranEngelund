@@ -13,7 +13,8 @@ nav,
 ul li,
 h1,
 h2 {
-  font-family: var(--header-font);
+  font-family: var(--header-font), "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
   font-weight: 100;
 }
 
@@ -21,7 +22,7 @@ h3,
 p,
 .wp-block-post-date,
 .wp-block-latest-comments {
-  font-family: var(--body-font);
+  font-family: var(--body-font), "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 100;
 }
 
@@ -236,7 +237,7 @@ footer {
 }
 
 .postImage {
-  width: 80%;
+  width: 40%;
 }
 
 .post-copy {
@@ -321,6 +322,12 @@ footer {
     display: none;
   }
 
+  /*-- Post Specific --*/
+
+  .postImage {
+    width: 65%;
+  }
+
   .post-copy {
     margin: auto 43px;
   }
@@ -335,5 +342,9 @@ footer {
 
   .post-copy {
     margin: auto 20px;
+  }
+
+  .postImage {
+    width: 80%;
   }
 }
