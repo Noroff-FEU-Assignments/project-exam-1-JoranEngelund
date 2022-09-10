@@ -246,6 +246,7 @@ footer {
 .comments h2,
 .form-container h2 {
   font-size: 1.7em;
+  font-family: var(--header-font);
 }
 
 /*-- Form Styling --*/
@@ -277,6 +278,7 @@ footer {
 
 ::placeholder {
   color: white;
+  font-family: var(--body-font);
 }
 
 .error-message {
