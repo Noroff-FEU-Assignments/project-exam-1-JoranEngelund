@@ -233,7 +233,7 @@ footer {
 }
 
 .post-title {
-  font-family: var(--header-font)
+  font-family: var(--header-font), 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
   font-size: 2em;
 }
 
