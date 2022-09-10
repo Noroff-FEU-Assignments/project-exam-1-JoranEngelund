@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/roq6nqe.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/roq6nqe.css" />
+    <title>Contact | Life</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <a href="/index.html">
+          <img
+            class="logo"
+            src="assets/logo.png"
+            alt="Logo of the blogging brand, Life"
+          />
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/posts.html">Posts</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a class="active" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="page-headings">Contact</h1>
+      <div class="underline-headings"></div>
+      <section class="form-container">
+        <form method="POST" action="Submit" class="contact-form">
+          <div>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Name *"
+              class="form-input"
+            />
+            <div class="error-message">Must contain minimum 1 letter</div>
+          </div>
+          <div>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email@address.com *"
+              class="form-input"
+            />
+            <div class="error-message">Please provide a valid email</div>
+          </div>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Subject *"
+            class="form-input"
+          />
+          <div class="error-message">Must contain minimum 3 characters</div>
+          <div>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Message... *"
+              class="form-input"
+            ></textarea>
+            <div class="error-message">Must contain minimum 10 characters</div>
+          </div>
+          <div class="cta-container">
+            <button type="submit" id="submit" class="cta">Send</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer><a class="footer-copy" href="#">&copy; JayDesign</a></footer>
+  </body>
+  <script src="/js/index.js"></script>
+</html>

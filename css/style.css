@@ -87,7 +87,7 @@ nav ul li a:hover {
 .page-headings {
   text-align: center;
   font-size: 3em;
-  margin: 40px 248px 0;
+  margin: 40px auto 0 auto;
 }
 
 .underline-headings {
@@ -197,6 +197,25 @@ footer {
 
 /*-- blog posts --*/
 
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+#search {
+  box-shadow: 0 3px 6px black;
+  padding: 12px 39px;
+  border-radius: 34px;
+  border: none;
+  background-color: var(--main-color);
+  font-family: var(--body-font);
+}
+
+search::placeholder {
+  color: white;
+}
+
 .blog-posts {
   display: flex;
   justify-content: center;
@@ -251,7 +270,8 @@ footer {
 
 /*-- Form Styling --*/
 
-.form-container h2 {
+.form-container h2,
+.comment-form {
   text-align: center;
 }
 
@@ -259,11 +279,19 @@ footer {
   margin-bottom: 20px;
 }
 
-.comment-form {
+.comment-form,
+.contact-form {
   display: flex;
   flex-direction: column;
-  text-align: center;
+}
+
+.comment-form {
   gap: 14px;
+}
+
+.contact-form {
+  align-items: center;
+  margin: 20px auto;
 }
 
 .form-input {
