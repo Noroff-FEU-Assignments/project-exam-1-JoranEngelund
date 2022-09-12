@@ -18,9 +18,7 @@ h2 {
 }
 
 h3,
-p,
-.wp-block-post-date,
-.wp-block-latest-comments {
+p {
   font-family: var(--body-font);
   font-weight: 100;
 }
@@ -203,19 +201,6 @@ footer {
   margin: 20px auto;
 }
 
-#search {
-  box-shadow: 0 3px 6px black;
-  padding: 12px 39px;
-  border-radius: 34px;
-  border: none;
-  background-color: var(--main-color);
-  font-family: var(--body-font);
-}
-
-search::placeholder {
-  color: white;
-}
-
 .blog-posts {
   display: flex;
   justify-content: center;
@@ -256,6 +241,7 @@ search::placeholder {
 
 .post-title {
   font-size: 2em;
+  font-family: var(--header-font);
 }
 
 .postImage {
@@ -359,7 +345,8 @@ search::placeholder {
     width: 65%;
   }
 
-  .post-copy {
+  .post-copy,
+  .body-copy {
     margin: auto 43px;
   }
 }
@@ -371,7 +358,8 @@ search::placeholder {
     font-size: 1.7em;
   }
 
-  .post-copy {
+  .post-copy,
+  .body-copy {
     margin: auto 20px;
   }
 
