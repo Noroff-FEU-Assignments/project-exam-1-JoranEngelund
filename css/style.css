@@ -228,6 +228,10 @@ search::placeholder {
   margin: 20px;
 }
 
+.post-image {
+  width: 100%;
+}
+
 .buttons-container {
   display: flex;
   flex-direction: column;
