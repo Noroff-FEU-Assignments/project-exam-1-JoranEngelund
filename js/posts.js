@@ -31,24 +31,30 @@ const viewMoreBtn = document.querySelector(".view-more-cta");
 const viewLessBtn = document.querySelector(".view-less-cta");
 const viewMoreContainer = document.querySelector(".view-more");
 
+viewLessBtn.addEventListener("click", viewLess);
+
+let pageNumber = 1;
+
 function viewMore() {
-  let isClicked = false;
-  if (!viewMoreBtn.clicked === true) {
-    isClicked = true;
-    viewMoreBtn.style.display = "none";
-    viewLessBtn.style.display = "block";
+  if (!viewMoreBtn.clicked) {
+    pageNumber++;
+    const testUrl = `https://life-api.engelund.site/wp-json/wp/v2/posts?page=${pageNumber}&_embed`;
 
-    const page2Url =
-      "https://life-api.engelund.site/wp-json/wp/v2/posts?page=2&_embed";
-
-    async function fetchPageTwo() {
-      const response = await fetch(page2Url);
-      const posts = await response.json();
-      console.log(posts);
-      posts.forEach(function (post) {
-        const blogImage = post._embedded?.["wp:featuredmedia"][0].source_url;
-        const blogImageAlt = post._embedded?.["wp:featuredmedia"][0].alt_text;
-        viewMoreContainer.innerHTML += `<div class="post-card">
+    async function fetchMore() {
+      try {
+        const response = await fetch(testUrl);
+        const data = await response.json();
+        console.log(data);
+        for (let i = 0; i < data.length; i++) {
+          if (data.length <= 2) {
+            viewMoreBtn.style.display = "none";
+            viewLessBtn.style.display = "block";
+          }
+        }
+        data.forEach(function (post) {
+          const blogImage = post._embedded?.["wp:featuredmedia"][0].source_url;
+          const blogImageAlt = post._embedded?.["wp:featuredmedia"][0].alt_text;
+          viewMoreContainer.innerHTML += `<div class="post-card">
                                       <a href="/post-specific.html?id=${post.id}">
                                         <img class="post-image" src="${blogImage}" alt="${blogImageAlt}"/>
                                       </a>
@@ -59,22 +65,23 @@ function viewMore() {
                                       </div>
                                     </div>
                                     `;
-      });
+        });
+      } catch (error) {
+        if (!error === 400) viewMoreBtn.style.display = "none";
+      }
     }
-    fetchPageTwo();
-  } else {
-    isClicked = false;
+    fetchMore();
   }
-  console.log(isClicked);
 }
 
+viewMoreBtn.addEventListener("click", viewMore);
+
 function viewLess() {
-  if (!viewLessBtn.clicked === true) {
+  if (!viewLessBtn.clicked) {
+    pageNumber--;
     viewMoreContainer.innerHTML = "";
     viewMoreBtn.style.display = "block";
     viewLessBtn.style.display = "none";
   }
 }
-
-viewMoreBtn.addEventListener("click", viewMore);
 viewLessBtn.addEventListener("click", viewLess);

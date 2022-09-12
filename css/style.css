@@ -95,9 +95,69 @@ nav ul li a:hover {
   text-align: center;
 }
 
+/*-- Index --*/
+
+.index-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .carousel {
+  width: 100%;
+  max-width: 964px;
+  text-align: center;
+}
+
+.content-container {
+  overflow: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.content-container::-webkit-scrollbar {
+  height: 0;
+}
+
+.carousel-posts {
+  display: grid;
+  grid-gap: 16px;
+  grid-auto-flow: column;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.slider-card {
+  width: 228px;
+  height: 474px;
   display: flex;
   flex-direction: column;
+}
+
+.prev {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  outline: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(50%, -50%);
+  display: none;
+}
+
+.next {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  outline: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
 }
 
 .body-copy {
@@ -151,6 +211,7 @@ nav ul li a:hover {
 .cta-container {
   text-align: center;
   margin-bottom: 30px;
+  margin-top: auto;
 }
 
 .hamburger-menu-open,
@@ -344,25 +405,41 @@ footer {
     width: 65%;
   }
 
-  .post-copy,
-  .body-copy {
+  .post-copy {
     margin: auto 43px;
+  }
+
+  /*-- About page --*/
+  .body-copy {
+    font-size: 1.3em;
   }
 }
 
 @media only screen and (max-width: 570px) {
+  /*-- Global Styles --*/
+
+  .page-headings {
+    font-size: 2em;
+  }
+
   /*-- Post Specific --*/
 
   .post-title {
     font-size: 1.7em;
   }
 
-  .post-copy,
-  .body-copy {
+  .post-copy {
     margin: auto 20px;
   }
 
   .postImage {
     width: 80%;
+  }
+
+  /*-- About Page --*/
+
+  .body-copy {
+    margin: 5% 3%;
+    font-size: 0.8em;
   }
 }
