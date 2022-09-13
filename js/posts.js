@@ -1,3 +1,7 @@
+/*-- Import --*/
+
+import { stopLoadingIndicator } from "./loadingFunction.js";
+
 /*-- API FETCH WITH DYNAMIC HTML --*/
 
 const postContainer = document.querySelector(".blog-posts");
@@ -8,6 +12,7 @@ async function fetchPosts() {
   try {
     const response = await fetch(url);
     const posts = await response.json();
+    stopLoadingIndicator();
     console.log(posts);
     posts.forEach(function (post) {
       const blogImage = post._embedded?.["wp:featuredmedia"][0].source_url;
@@ -24,6 +29,7 @@ async function fetchPosts() {
                             </div>`;
     });
   } catch (error) {
+    stopLoadingIndicator();
     console.log(error);
   }
 }

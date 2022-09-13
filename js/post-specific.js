@@ -1,3 +1,6 @@
+/*-- Import --*/
+import { loadingIndicator, stopLoadingIndicator } from "./loadingFunction.js";
+
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
@@ -11,6 +14,7 @@ async function fetchPostDetails() {
   try {
     const response = await fetch(url);
     const details = await response.json();
+    stopLoadingIndicator();
     console.log(details);
 
     document.title = `${details.title.rendered} | Life`;
@@ -27,6 +31,7 @@ async function fetchPostDetails() {
                                   <div class="latest-comments"></div>
                                   `;
   } catch (error) {
+    stopLoadingIndicator();
     console.log(error);
   }
 }
