@@ -361,6 +361,24 @@ footer {
 
 /*-- Screen Resize --*/
 
+@media only screen and (max-width: 960px) {
+  /*-- Index Page --*/
+
+  .content-container {
+    margin: auto 16px auto 16px;
+  }
+  .carouselNavigation {
+    display: none;
+  }
+
+  .carousel-info {
+    display: block;
+  }
+  .carousel-info p {
+    margin-bottom: auto;
+  }
+}
+
 @media only screen and (max-width: 764px) {
   /*-- Global Styles --*/
 
@@ -369,22 +387,6 @@ footer {
   }
 
   /*-- Index page --*/
-
-  .content-container {
-    margin: auto 16px auto 16px;
-  }
-
-  .carouselNavigation {
-    display: none;
-  }
-
-  .carousel-info {
-    display: block;
-  }
-
-  .carousel-info p {
-    margin-bottom: auto;
-  }
 
   /*-- Hamburger Menu --*/
   ul {
