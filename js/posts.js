@@ -1,3 +1,5 @@
+/*-- API FETCH WITH DYNAMIC HTML --*/
+
 const postContainer = document.querySelector(".blog-posts");
 
 const url = "https://life-api.engelund.site/wp-json/wp/v2/posts?page=1&_embed";
@@ -26,6 +28,8 @@ async function fetchPosts() {
   }
 }
 fetchPosts();
+
+/*-- VIEW MORE FUNCTION WITH API FETCH --*/
 
 const viewMoreBtn = document.querySelector(".view-more-cta");
 const viewLessBtn = document.querySelector(".view-less-cta");

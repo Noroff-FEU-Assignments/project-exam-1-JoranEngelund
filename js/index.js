@@ -1,3 +1,5 @@
+/*-- API FETCH WITH DYNAMIC HTML --*/
+
 const carousel = document.querySelector(".carousel-posts");
 
 const url = "https://life-api.engelund.site/wp-json/wp/v2/posts?page=1&_embed";
@@ -30,6 +32,8 @@ async function fetchPosts() {
 
 fetchPosts();
 
+/*-- CAROUSEL --*/
+
 const carouselContainer = document.querySelector(".content-container");
 const carouselPosts = document.querySelector(".carousel-posts");
 const prevBtn = document.querySelector(".prev");
@@ -42,33 +46,14 @@ nextBtn.addEventListener("click", nextSlide);
 
 function nextSlide() {
   carouselContainer.scrollBy(width + gap, 0);
-  if (carouselContainer.scrollWidth !== 0) {
-    prevBtn.style.display = "flex";
-  }
-  if (
-    carouselPosts.scrollWidth - width - gap <=
-    carouselContainer.scrollLeft + width
-  ) {
-    nextBtn.style.display = "none";
-  }
 }
 
 prevBtn.addEventListener("click", prevSlide);
 
 function prevSlide() {
   carouselContainer.scrollBy(-(width + gap), 0);
-  if (carouselContainer.scrollLeft - width - gap <= 0) {
-    prevBtn.style.display = "none";
-  }
-  if (
-    !carouselPosts.scrollWidth - width - gap <=
-    carouselContainer.scrollLeft + width
-  ) {
-    nextBtn.style.display = "flex";
-  }
 }
 
-window.addEventListener(
-  "resize",
-  (e) => (width = carouselContainer.offsetWidth)
-);
+window.addEventListener("resize", function () {
+  width = carouselContainer.offsetWidth;
+});

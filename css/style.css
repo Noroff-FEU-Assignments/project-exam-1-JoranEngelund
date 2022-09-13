@@ -224,29 +224,8 @@ nav ul li a:hover {
   margin-top: auto;
 }
 
-.hamburger-menu-open,
-.hamburger-menu-close {
-  border: none;
-  background-color: var(--main-color);
-  font-size: 2em;
-  display: none;
-  position: fixed;
-  top: 7.7rem;
-  right: 4rem;
-}
-
-.fas,
-.fa-times,
-.fas,
-.fa-bars {
-  position: fixed;
-  top: 7.7rem;
-  right: 4rem;
-}
-
-.fas,
-.fas-times {
-  right: 4.1rem;
+button {
+  cursor: pointer;
 }
 
 /*-- Footer --*/
@@ -381,6 +360,12 @@ footer {
 
   .page-headings {
     font-size: 2.5em;
+  }
+
+  /*-- Index page --*/
+
+  .carouselNavigation {
+    display: none;
   }
 
   /*-- Hamburger Menu --*/
