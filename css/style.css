@@ -366,7 +366,8 @@ footer {
   /*-- Index Page --*/
 
   .content-container {
-    margin: auto 16px auto 16px;
+    margin: auto 44px auto 44px;
+    /*margin: auto 16px auto 16px;*/
   }
   .carouselNavigation {
     display: none;
