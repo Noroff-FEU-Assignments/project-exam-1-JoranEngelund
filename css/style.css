@@ -143,6 +143,12 @@ nav ul li a:hover {
   gap: 159px;
 }
 
+.carousel-info {
+  display: none;
+  font-size: 1.5em;
+  margin: 10px auto;
+}
+
 /*
 .prev {
   display: flex;
@@ -366,6 +372,10 @@ footer {
 
   .carouselNavigation {
     display: none;
+  }
+
+  .carousel-info {
+    display: block;
   }
 
   /*-- Hamburger Menu --*/
