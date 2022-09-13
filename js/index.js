@@ -39,21 +39,27 @@ const carouselContainer = document.querySelector(".content-container");
 const carouselPosts = document.querySelector(".carousel-posts");
 const prevBtn = document.querySelector(".prev");
 const nextBtn = document.querySelector(".next");
+
+/*-- Initializing "gap" variabel to mimick the css styling of the gap in the carousel between each post-card --*/
 const gap = 16;
+
+/*-- initializing "width" variabel with the whole width of the container of the carousel, containing its border and padding width aswell --*/
 let width = carouselContainer.offsetWidth;
 
-nextBtn.addEventListener("click", nextSlide);
-
+/*-- Function that tells the container to move horizontally of the whole width of the container + the gap. "0" is vertically, which we set at 0, as we don't use it --*/
 function nextSlide() {
   carouselContainer.scrollBy(width + gap, 0);
 }
 
-prevBtn.addEventListener("click", prevSlide);
-
+/*-- Function that tells the container to scroll subtract horizontally of the whole width of the container + the gap. Since it subtracts, it will go back the whole width + gap --*/
 function prevSlide() {
   carouselContainer.scrollBy(-(width + gap), 0);
 }
 
+prevBtn.addEventListener("click", prevSlide);
+nextBtn.addEventListener("click", nextSlide);
+
+/*-- event listener on the screen, to listen to "resize", running a function that keeps the container at it initial width with border and padding at all time" --*/
 window.addEventListener("resize", function () {
   width = carouselContainer.offsetWidth;
 });
