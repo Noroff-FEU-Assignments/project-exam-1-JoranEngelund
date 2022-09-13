@@ -14,7 +14,7 @@ ul li,
 h1,
 h2,
 h3 {
-  font-family: var(--body-font);
+  font-family: var(--header-font);
   font-weight: 100;
 }
 
