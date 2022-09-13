@@ -370,6 +370,10 @@ footer {
 
   /*-- Index page --*/
 
+  .content-container {
+    margin: auto 10px auto 10px;
+  }
+
   .carouselNavigation {
     display: none;
   }
