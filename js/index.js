@@ -13,7 +13,7 @@ async function fetchPosts() {
       const blogImage = post._embedded?.["wp:featuredmedia"][0].source_url;
       const blogImageAlt = post._embedded?.["wp:featuredmedia"][0].alt_text;
       carousel.innerHTML += `
-                              <div class="slider-card"
+                              <div class="slider-card">
                                 <a href="/post-specific.html?id=${post.id}"><img class="post-image" src="${blogImage}" alt="${blogImageAlt}"/></a>
                                 <h2>${post.title.rendered}</h2>
                                 <h3>${post.excerpt.rendered}</h3>

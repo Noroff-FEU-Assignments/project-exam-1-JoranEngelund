@@ -12,8 +12,9 @@
 nav,
 ul li,
 h1,
-h2 {
-  font-family: var(--header-font);
+h2,
+h3 {
+  font-family: var(--body-font);
   font-weight: 100;
 }
 
