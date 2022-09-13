@@ -382,6 +382,10 @@ footer {
     display: block;
   }
 
+  .carousel-info p {
+    margin-bottom: auto;
+  }
+
   /*-- Hamburger Menu --*/
   ul {
     position: fixed;
