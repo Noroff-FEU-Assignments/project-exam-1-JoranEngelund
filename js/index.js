@@ -36,6 +36,7 @@ const prevBtn = document.querySelector(".prev");
 const nextBtn = document.querySelector(".next");
 
 const gap = 16;
+let width = carouselContainer.offsetWidth;
 
 nextBtn.addEventListener("click", nextSlide);
 
@@ -67,7 +68,6 @@ function prevSlide() {
   }
 }
 
-let width = carouselContainer.offsetWidth;
 window.addEventListener(
   "resize",
   (e) => (width = carouselContainer.offsetWidth)

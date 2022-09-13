@@ -31,8 +31,6 @@ const viewMoreBtn = document.querySelector(".view-more-cta");
 const viewLessBtn = document.querySelector(".view-less-cta");
 const viewMoreContainer = document.querySelector(".view-more");
 
-viewLessBtn.addEventListener("click", viewLess);
-
 let pageNumber = 1;
 
 function viewMore() {
@@ -67,7 +65,7 @@ function viewMore() {
                                     `;
         });
       } catch (error) {
-        if (!error === 400) viewMoreBtn.style.display = "none";
+        console.log(error);
       }
     }
     fetchMore();

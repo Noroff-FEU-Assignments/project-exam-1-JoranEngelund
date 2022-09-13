@@ -108,6 +108,7 @@ nav ul li a:hover {
   width: 100%;
   max-width: 964px;
   text-align: center;
+  margin-top: 25px;
 }
 
 .content-container {
@@ -135,6 +136,14 @@ nav ul li a:hover {
   flex-direction: column;
 }
 
+.carouselNavigation {
+  margin: 25px auto auto auto;
+  display: flex;
+  flex-direction: row;
+  gap: 159px;
+}
+
+/*
 .prev {
   display: flex;
   justify-content: center;
@@ -159,7 +168,7 @@ nav ul li a:hover {
   right: 0;
   transform: translate(-50%, -50%);
 }
-
+*/
 .body-copy {
   font-size: 1.5em;
   text-align: center;
@@ -205,6 +214,7 @@ nav ul li a:hover {
 .cta:hover {
   background: none;
   color: black;
+  padding: 7px 44px;
   border: 2px solid var(--main-cta-color);
 }
 
