@@ -193,6 +193,33 @@ nav ul li a:hover {
   animation: loader 2s ease-in-out infinite;
 }
 
+/*-- Modal --*/
+
+.modal-container {
+  display: none;
+  position: fixed;
+  flex-direction: column;
+  inset: 0;
+  align-items: center;
+  padding-top: 165px;
+}
+
+.modale-image-container {
+  max-width: 500px;
+  width: 100%;
+}
+
+/*
+.modal {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  top: 7%;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}*/
+
 /*-- CTA & Buttons --*/
 .cta {
   text-align: center;
@@ -391,13 +418,6 @@ footer {
     margin: auto 16px auto 16px;
   }
 
-  .carouselNavigation {
-    display: none;
-  }
-
-  .carousel-info {
-    display: block;
-  }
   .carousel-info p {
     margin-bottom: auto;
   }
@@ -456,6 +476,14 @@ footer {
 
 @media only screen and (max-width: 570px) {
   /*-- Global Styles --*/
+
+  .carouselNavigation {
+    display: none;
+  }
+
+  .carousel-info {
+    display: block;
+  }
 
   .page-headings {
     font-size: 2em;
