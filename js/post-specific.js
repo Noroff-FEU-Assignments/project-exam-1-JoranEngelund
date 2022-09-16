@@ -31,8 +31,24 @@ async function fetchPostDetails() {
                                   <div class="post-copy">${details.content.rendered}</div
                                   </div>
                                   <div class="underline-headings"></div>
-                                  <div class="latest-comments"></div>
                                   `;
+
+    /*-- Modal --*/
+
+    const modalContainer = document.querySelector(".modal-container");
+    const modalImage = document.querySelector(".modale-image");
+    const postImage = document.querySelector("#modalImg");
+
+    postImage.addEventListener("click", function () {
+      modalContainer.style.display = "flex";
+      modalImage.src = this.src;
+    });
+
+    window.addEventListener("click", function (event) {
+      if (event.target == modalContainer) {
+        modalContainer.style.display = "none";
+      }
+    });
   } catch (error) {
     stopLoadingIndicator();
     console.log(error);
