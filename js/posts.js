@@ -5,8 +5,6 @@ import { stopLoadingIndicator } from "./loadingFunction.js";
 const postContainer = document.querySelector(".blog-posts");
 const viewMoreBtn = document.querySelector(".view-more-cta");
 
-const url = "https://life-api.engelund.site/wp-json/wp/v2/posts?page=1&_embed";
-
 let pageNumber = 0;
 
 async function fetchPosts() {
@@ -17,7 +15,7 @@ async function fetchPosts() {
     const response = await fetch(url);
     const maximumPages = response.headers.get("x-wp-totalpages");
     const posts = await response.json();
-
+    console.log(posts);
     if (Number(maximumPages) === pageNumber) {
       viewMoreBtn.style.display = "none";
     }
