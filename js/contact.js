@@ -28,15 +28,16 @@ function emailValidator(email) {
   return pattern;
 }
 
+submit.disabled = true;
 let validForm = false;
 
 const formValidation = () => {
-  if (lengthChecker(inputName.value, 0) === true) {
+  if (lengthChecker(inputName.value, 4) === true) {
     validForm = true;
     nameError.innerHTML = "";
   } else {
     validForm = false;
-    nameError.innerHTML = "Must contain minimum 1 letter";
+    nameError.innerHTML = "Must contain minimum 5 letter";
   }
   if (emailValidator(email.value) === true) {
     validForm = true;
@@ -45,27 +46,27 @@ const formValidation = () => {
     validForm = false;
     emailError.innerHTML = "Please provide a valid email";
   }
-  if (lengthChecker(subject.value, 2) === true) {
+  if (lengthChecker(subject.value, 14) === true) {
     validForm = true;
     subjectError.innerHTML = "";
   } else {
     validForm = false;
-    subjectError.innerHTML = "Must contain minimum 3 characters";
+    subjectError.innerHTML = "Must contain minimum 15 characters";
   }
-  if (lengthChecker(message.value, 9) === true) {
+  if (lengthChecker(message.value, 24) === true) {
     validForm = true;
     messageError.innerHTML = "";
   } else {
     validForm = false;
-    messageError.innerHTML = "Must contain minimum 10 characters";
+    messageError.innerHTML = "Must contain minimum 25 characters";
   }
 };
 
 const buttonDisabled = () => {
   if (
-    lengthChecker(inputName.value, 0) &&
-    lengthChecker(subject.value, 2) &&
-    lengthChecker(message.value, 9) &&
+    lengthChecker(inputName.value, 4) &&
+    lengthChecker(subject.value, 14) &&
+    lengthChecker(message.value, 24) &&
     emailValidator(email.value) === true
   ) {
     submit.disabled = false;
