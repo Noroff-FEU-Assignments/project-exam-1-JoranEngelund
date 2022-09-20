@@ -32,6 +32,7 @@
     <main>
       <h1 class="page-headings">Contact</h1>
       <div class="underline-headings"></div>
+      <div class="validation-message"></div>
       <section class="form-container">
         <form method="POST" action="Submit" class="contact-form">
           <div>
@@ -42,7 +43,9 @@
               placeholder="Name *"
               class="form-input"
             />
-            <div class="error-message">Must contain minimum 1 letter</div>
+          </div>
+          <div class="error-message name-error">
+            Must contain minimum 1 letter
           </div>
           <div>
             <input
@@ -52,16 +55,22 @@
               placeholder="Email@address.com *"
               class="form-input"
             />
-            <div class="error-message">Please provide a valid email</div>
           </div>
-          <input
-            type="text"
-            id="subject"
-            name="subject"
-            placeholder="Subject *"
-            class="form-input"
-          />
-          <div class="error-message">Must contain minimum 3 characters</div>
+          <div class="error-message email-error">
+            Please provide a valid email
+          </div>
+          <div>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="Subject *"
+              class="form-input"
+            />
+          </div>
+          <div class="error-message subject-error">
+            Must contain minimum 3 characters
+          </div>
           <div>
             <textarea
               id="message"
@@ -71,14 +80,19 @@
               cols="30"
               class="form-input"
             ></textarea>
-            <div class="error-message">Must contain minimum 10 characters</div>
+          </div>
+          <div class="error-message message-error">
+            Must contain minimum 10 characters
           </div>
           <div class="cta-container">
-            <button type="submit" id="submit" class="cta">Send</button>
+            <button disabled type="submit" id="submit" class="cta submitButton">
+              Send
+            </button>
           </div>
         </form>
       </section>
     </main>
     <footer><a class="footer-copy" href="#">&copy; JayDesign</a></footer>
+    <script src="js/contact.js"></script>
   </body>
 </html>

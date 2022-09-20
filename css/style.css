@@ -150,32 +150,6 @@ nav ul li a:hover {
   margin: 10px auto;
 }
 
-/*
-.prev {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  outline: 0;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(50%, -50%);
-  display: none;
-}
-
-.next {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  outline: 0;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translate(-50%, -50%);
-}
-*/
 .body-copy {
   font-size: 1.5em;
   text-align: center;
@@ -398,6 +372,22 @@ footer {
   font-family: var(--body-font);
 }
 
+.submitButton:disabled {
+  text-align: center;
+  opacity: 50%;
+  color: black;
+  background-color: var(--main-color);
+  font-family: var(--body-font);
+  padding: 7px 44px;
+  box-shadow: 0px 3px 6px black;
+  border: var(--main-cta-color);
+}
+
+.validation-message {
+  text-align: center;
+  font-size: 1.5em;
+}
+
 /*-- Animations --*/
 
 @keyframes loader {
@@ -508,5 +498,10 @@ footer {
   .body-copy {
     margin: 5% 3%;
     font-size: 0.8em;
+  }
+
+  /*-- Contact Page --*/
+  .validation-message {
+    font-size: 1em;
   }
 }

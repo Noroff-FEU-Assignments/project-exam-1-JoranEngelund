@@ -18,7 +18,6 @@ async function fetchPostDetails() {
     const response = await fetch(url);
     const details = await response.json();
     stopLoadingIndicator();
-    console.log(details);
 
     document.title = `${details.title.rendered} | Life`;
     const blogImage = details._embedded?.["wp:featuredmedia"][0].source_url;
