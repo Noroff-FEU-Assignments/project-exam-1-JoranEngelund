@@ -1,11 +1,12 @@
 /*-- Import --*/
+/*
 import {
   hamburgerMenuOpen,
   navigation,
   checkScreenSize,
   openMenu,
 } from "./hamburger-menu.js";
-
+*/
 /*-- Form Validaton --*/
 
 const formContainer = document.querySelector(".form-container");
@@ -111,5 +112,7 @@ const formSubmitter = (event) => {
 form.addEventListener("submit", formSubmitter);
 
 /*-- Hamburger Menu --*/
+/*
 checkScreenSize();
 openMenu();
+*/
