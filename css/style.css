@@ -179,17 +179,6 @@ nav ul li a:hover {
   box-shadow: inset 0 0 0 100vw rgb(0 0 0 / 60%);
 }
 
-/*
-.modal {
-  display: none;
-  position: fixed;
-  justify-content: center;
-  top: 7%;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-}*/
-
 /*-- CTA & Buttons --*/
 .cta {
   text-align: center;
