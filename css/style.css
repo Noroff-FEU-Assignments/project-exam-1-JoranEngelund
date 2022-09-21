@@ -376,6 +376,11 @@ footer {
 /*-- Hamburger Menu --*/
 
 .closeMenu,
+.openMenu {
+  color: black;
+}
+
+.closeMenu,
 .openMenu,
 .hamburger-close,
 .hamburger-open {
