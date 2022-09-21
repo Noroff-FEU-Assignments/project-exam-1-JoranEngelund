@@ -64,7 +64,6 @@ a {
 .logo-container {
   display: flex;
   grid-area: logo;
-  width: 70%;
 }
 
 .logo {
