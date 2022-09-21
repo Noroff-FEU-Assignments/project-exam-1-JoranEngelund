@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Life is a blogging platform for people who wants to share their daily life experiences"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/roq6nqe.css" />
     <link rel="stylesheet" href="https://use.typekit.net/roq6nqe.css" />
@@ -25,6 +29,14 @@
         </a>
       </div>
       <nav>
+        <div class="hamburger-container">
+          <button type="button" class="hamburger-open">
+            <i class="fas fa-bars openMenu"></i>
+          </button>
+          <button type="button" class="hamburger-close">
+            <i class="fas fa-times closeMenu"></i>
+          </button>
+        </div>
         <ul>
           <li><a class="active" href="/index.html">Home</a></li>
           <li><a href="/posts.html">Posts</a></li>
@@ -69,4 +81,5 @@
     <footer><a class="footer-copy" href="#">&copy; JayDesign</a></footer>
   </body>
   <script src="/js/index.js" type="module"></script>
+  <script src="/js/hamburger-menu.js"></script>
 </html>

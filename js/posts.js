@@ -2,6 +2,7 @@ import { stopLoadingIndicator } from "./loadingFunction.js";
 
 /*-- API FETCH WITH DYNAMIC HTML --*/
 
+const errorAlert = document.querySelector(".error-alert");
 const postContainer = document.querySelector(".blog-posts");
 const viewMoreBtn = document.querySelector(".view-more-cta");
 
@@ -39,6 +40,7 @@ async function fetchPosts() {
   } catch (error) {
     stopLoadingIndicator();
     console.log(error);
+    errorAlert.innerHTML = `<p>It seems the posts didn't get loaded correctly, please refresh the page or return at a later       time!</p>`;
   }
 }
 fetchPosts();

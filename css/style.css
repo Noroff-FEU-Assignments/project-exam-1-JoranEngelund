@@ -373,6 +373,15 @@ footer {
   font-size: 1.5em;
 }
 
+/*-- Hamburger Menu --*/
+
+.closeMenu,
+.openMenu,
+.hamburger-close,
+.hamburger-open {
+  display: none;
+}
+
 /*-- Animations --*/
 
 @keyframes loader {
@@ -409,28 +418,33 @@ footer {
 
   /*-- Hamburger Menu --*/
   ul {
-    position: fixed;
-    display: flex;
+    position: absolute;
     flex-direction: column;
+    justify-content: center;
     background-color: var(--main-color);
     align-content: center;
     display: none;
     right: 0px;
-    top: 195px;
-    height: 234px;
+    top: 130px;
+    height: 260px;
   }
 
-  .hamburger-menu-open,
-  .hamburger-menu-close {
-    display: block;
+  .hamburger-open {
+    display: flex;
   }
 
-  .fa-bars {
-    display: block;
+  .hamburger-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+    margin-right: 30px;
   }
 
-  .fa-times {
-    display: none;
+  .hamburger-close,
+  .hamburger-open {
+    border: none;
+    background: none;
+    font-size: 1.3em;
   }
 
   /*-- Post Specific --*/

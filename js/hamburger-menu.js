@@ -1,20 +1,20 @@
-const openMenuContainer = document.querySelector(".hamburger-menu-open");
-const closeMenuContainer = document.querySelector(".hamburger-menu-close");
-const menuIcon = document.querySelectorAll(".fa-bars");
-const closeIcon = document.querySelectorAll(".fa-times");
+const hamburgerMenuOpen = document.querySelector(".hamburger-open");
+const hamburgerMenuClosed = document.querySelector(".hamburger-close");
+
+const openBtn = document.querySelector(".openMenu");
+const closeBtn = document.querySelector(".closeMenu");
 const navigation = document.querySelector("ul");
-closeIcon.display = "none";
 
-function openMenu() {
-  if (!openMenuContainer.clicked === true) {
-    menuIcon.style.display = "none";
-    closeIcon.style.display = "block";
-    navigation.style.display = "block";
-  } else {
-    menuIcon.style.display = "block";
-    closeIcon.style.display = "none";
-    navigation.style.display = "none";
-  }
-}
+hamburgerMenuOpen.addEventListener("click", (e) => {
+  navigation.style.display = "flex";
+  openBtn.style.display = "none";
+  hamburgerMenuClosed.style.display = "flex";
+  closeBtn.style.display = "flex";
+});
 
-openMenuContainer.addEventListener("click", openMenu);
+hamburgerMenuClosed.addEventListener("click", (e) => {
+  navigation.style.display = "none";
+  openBtn.style.display = "flex";
+  hamburgerMenuClosed.style.display = "none";
+  closeBtn.style.display = "none";
+});
