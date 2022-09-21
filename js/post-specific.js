@@ -49,7 +49,7 @@ async function fetchPostDetails() {
       modalImage.src = this.src;
     });
 
-    window.addEventListener("click", function (event) {
+    modalContainer.addEventListener("click", function (event) {
       if (event.target == modalContainer) {
         modalContainer.style.display = "none";
       }
