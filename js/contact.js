@@ -11,7 +11,7 @@ const subjectError = document.querySelector(".subject-error");
 const message = document.querySelector("#message");
 const messageError = document.querySelector(".message-error");
 const errorMessage = document.querySelector(".error-message");
-const submit = document.querySelector("#submit");
+const submit = document.querySelector(".submitButton");
 const validationMessage = document.querySelector(".validation-message");
 
 function lengthChecker(value, len) {

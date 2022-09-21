@@ -75,3 +75,89 @@ window.addEventListener("click", function (event) {
     modalContainer.style.display = "none";
   }
 });
+
+/*--Comment Section Validator--*/
+const validationMessage = document.querySelector(".validation-message");
+const commentForm = document.querySelector(".comment-form");
+const inputName = document.querySelector("#name");
+const nameError = document.querySelector(".name-error");
+const email = document.querySelector("#email");
+const emailError = document.querySelector(".email-error");
+const comment = document.querySelector("#comment");
+const commentError = document.querySelector(".comment-error");
+const submit = document.querySelector(".submitButton");
+
+function lengthChecker(value, len) {
+  if (value.trim().length > len) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function emailValidator(email) {
+  const regEx = /\S+@\S+\.\S+/;
+  const pattern = regEx.test(email);
+  return pattern;
+}
+
+let validForm = false;
+submit.disabled = true;
+
+const formValidation = () => {
+  if (lengthChecker(inputName.value, 4) === true) {
+    validForm = true;
+    nameError.innerHTML = "";
+  } else {
+    validForm = false;
+    nameError.innerHTML = "Must contain minimum 5 letters";
+  }
+  if (emailValidator(email.value) === true) {
+    validForm = true;
+    emailError.innerHTML = "";
+  } else {
+    validForm = false;
+    emailError = "Please provide a valid email";
+  }
+  if (lengthChecker(comment.value, 0) === true) {
+    validForm = true;
+    commentError.innerHTML = "";
+  } else {
+    validForm = false;
+    commentError.innerHTML = "Must contain minimum 1 character / Emoji";
+  }
+};
+
+const disabledButton = () => {
+  if (
+    lengthChecker(inputName.value, 4) &&
+    lengthChecker(comment.value, 0) &&
+    emailValidator(email.value) === true
+  ) {
+    submit.disabled = false;
+  } else {
+    submit.disabled = true;
+  }
+};
+
+inputName.addEventListener("keyup", formValidation);
+email.addEventListener("keyup", formValidation);
+comment.addEventListener("keyup", formValidation);
+
+inputName.addEventListener("keyup", disabledButton);
+email.addEventListener("keyup", disabledButton);
+comment.addEventListener("keyup", disabledButton);
+
+const commentFormSubmitter = (event) => {
+  event.preventDefault();
+
+  if (validForm === true) {
+    validationMessage.innerHTML = `<p>Your comment has been sent!</p> <p>Our administrators will validate it before it gets posted</p>`;
+  } else {
+    validationMessage.innerHTML = "";
+  }
+  commentForm.reset();
+  submit.disabled = true;
+};
+
+commentForm.addEventListener("submit", commentFormSubmitter);

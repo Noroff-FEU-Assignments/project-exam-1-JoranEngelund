@@ -43,6 +43,7 @@
       </section>
       <div class="underline-headings"></div>
       <section class="form-container">
+        <div class="validation-message"></div>
         <h2>Leave a Comment</h2>
         <form
           action="submit"
@@ -58,7 +59,9 @@
               placeholder="Name *"
               class="form-input"
             />
-            <div class="error-message">Must contain minimum 1 letter</div>
+            <div class="error-message name-error">
+              Must contain minimum 5 letters
+            </div>
           </div>
           <div>
             <input
@@ -68,7 +71,9 @@
               placeholder="Email@address.com *"
               class="form-input"
             />
-            <div class="error-message">Please provide a valid email</div>
+            <div class="error-message email-error">
+              Please provide a valid email
+            </div>
           </div>
           <div>
             <textarea
@@ -79,12 +84,12 @@
               rows="5"
               cols="30"
             ></textarea>
-            <div class="error-message">
+            <div class="error-message comment-error">
               Must contain minimum 1 character / Emoji
             </div>
           </div>
           <div class="cta-container">
-            <button type="submit" class="cta">Send</button>
+            <button type="submit" class="cta submitButton">Send</button>
           </div>
         </form>
       </section>
