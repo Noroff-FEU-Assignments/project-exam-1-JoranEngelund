@@ -1,4 +1,10 @@
 import { stopLoadingIndicator } from "./loadingFunction.js";
+import {
+  hamburgerMenuOpen,
+  navigation,
+  checkScreenSize,
+  openMenu,
+} from "./hamburger-menu.js";
 
 /*-- API FETCH WITH DYNAMIC HTML --*/
 
@@ -46,3 +52,7 @@ async function fetchPosts() {
 fetchPosts();
 
 viewMoreBtn.addEventListener("click", fetchPosts);
+
+/*-- Hamburger Menu --*/
+checkScreenSize();
+openMenu();

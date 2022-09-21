@@ -1,6 +1,12 @@
 /*-- Import --*/
 
 import { loadingIndicator, stopLoadingIndicator } from "./loadingFunction.js";
+import {
+  hamburgerMenuOpen,
+  navigation,
+  checkScreenSize,
+  openMenu,
+} from "./hamburger-menu.js";
 
 /*-- Fetch specific Posts --*/
 
@@ -161,3 +167,7 @@ const commentFormSubmitter = (event) => {
 };
 
 commentForm.addEventListener("submit", commentFormSubmitter);
+
+/*-- Hamburger Menu --*/
+checkScreenSize();
+openMenu();

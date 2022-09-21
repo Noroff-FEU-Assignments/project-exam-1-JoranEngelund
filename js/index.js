@@ -1,6 +1,11 @@
 /*-- API FETCH WITH DYNAMIC HTML --*/
 import { stopLoadingIndicator } from "./loadingFunction.js";
-
+import {
+  hamburgerMenuOpen,
+  navigation,
+  checkScreenSize,
+  openMenu,
+} from "./hamburger-menu.js";
 const carousel = document.querySelector(".carousel-posts");
 
 const url = "https://life-api.engelund.site/wp-json/wp/v2/posts?page=1&_embed";
@@ -63,3 +68,7 @@ nextBtn.addEventListener("click", nextSlide);
 window.addEventListener("resize", function () {
   width = carouselContainer.offsetWidth;
 });
+
+/*--Hamburger Menu --*/
+checkScreenSize();
+openMenu();

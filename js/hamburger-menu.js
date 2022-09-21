@@ -1,22 +1,21 @@
-const hamburgerMenuOpen = document.querySelector(".hamburger-open");
-const hamburgerMenuClosed = document.querySelector(".hamburger-close");
-const openBtn = document.querySelector("openMenu");
+export const hamburgerMenuOpen = document.querySelector(".hamburger-open");
+export const navigation = document.querySelector("ul");
 
-const navigation = document.querySelector("ul");
-
-function removeNav() {
+export function checkScreenSize() {
   const Screenwidth = window.innerWidth;
   if (Screenwidth <= 764) {
     navigation.style.display = "none";
   }
 }
 
-removeNav();
+checkScreenSize();
 
-hamburgerMenuOpen.addEventListener("click", (e) => {
-  if (navigation.style.display === "none") {
-    navigation.style.display = "flex";
-  } else {
-    navigation.style.display = "none";
-  }
-});
+export function openMenu() {
+  hamburgerMenuOpen.addEventListener("click", (e) => {
+    if (navigation.style.display === "none") {
+      navigation.style.display = "flex";
+    } else {
+      navigation.style.display = "none";
+    }
+  });
+}
