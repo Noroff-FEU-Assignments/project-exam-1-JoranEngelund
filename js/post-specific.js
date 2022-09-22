@@ -62,26 +62,6 @@ async function fetchPostDetails() {
 
 fetchPostDetails();
 
-/*-- Modal --*/
-
-setTimeout(() => {
-  const modalContainer = document.querySelector(".modal-container");
-  const modalImage = document.querySelector(".modale-image");
-  const postImage = document.querySelector("#modalImg");
-
-  postImage.addEventListener("click", function () {
-    modalContainer.style.display = "flex";
-    modalImage.src = this.src;
-  });
-}, "1000");
-
-window.addEventListener("click", function (event) {
-  const modalContainer = document.querySelector(".modal-container");
-  if (event.target == modalContainer) {
-    modalContainer.style.display = "none";
-  }
-});
-
 /*--Comment Section Validator--*/
 const validationMessage = document.querySelector(".validation-message");
 const commentForm = document.querySelector(".comment-form");
