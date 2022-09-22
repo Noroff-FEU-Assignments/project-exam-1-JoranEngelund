@@ -25,6 +25,12 @@ async function fetchPostDetails() {
     const details = await response.json();
     stopLoadingIndicator();
 
+    const metaDescription = document
+      .querySelector(`meta[name="description"]`)
+      .setAttribute(
+        "content",
+        `Read and comment on ${details.title.rendered}, posted on Life`
+      );
     document.title = `${details.title.rendered} | Life`;
     const blogImage = details._embedded?.["wp:featuredmedia"][0].source_url;
     const blogImageAlt = details._embedded?.["wp:featuredmedia"][0].alt_text;
