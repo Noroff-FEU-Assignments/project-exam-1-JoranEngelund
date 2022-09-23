@@ -1,4 +1,5 @@
-/*-- API FETCH WITH DYNAMIC HTML --*/
+/*--IMPORT --*/
+
 import { stopLoadingIndicator } from "./loadingFunction.js";
 import {
   hamburgerMenuOpen,
@@ -6,9 +7,14 @@ import {
   checkScreenSize,
   openMenu,
 } from "./hamburger-menu.js";
-const carousel = document.querySelector(".carousel-posts");
 
-const url = "https://life-api.engelund.site/wp-json/wp/v2/posts?page=1&_embed";
+/*-- API FETCH WITH DYNAMIC HTML --*/
+
+const carousel = document.querySelector(".carousel-posts");
+const errorContainer = document.querySelector(".error-alert");
+
+const url =
+  "https://life-api.engelund.site/wp-json/wp/v2/posts?per_page=20&_embed";
 
 async function fetchPosts() {
   try {
@@ -32,7 +38,16 @@ async function fetchPosts() {
     });
   } catch (error) {
     stopLoadingIndicator();
-    console.log(error);
+    errorContainer.innerHTML = `
+                            <p>
+                              It seems the posts didn't get loaded correctly, please refresh the page or return at a later       time!
+                            </p>
+                            <p>
+                              If you have any inquieries, please use our contact form to get in touch
+                            </p>
+                            <div class="cta-container">
+                              <a class="cta" href="/contact.html">Contact Us<a>
+                            </div>`;
   }
 }
 
@@ -56,7 +71,6 @@ function nextSlide() {
   carouselContainer.scrollBy(width + gap, 0);
 }
 
-/*-- Function that tells the container to scroll subtract horizontally of the whole width of the container + the gap. Since it subtracts, it will go back the whole width + gap --*/
 function prevSlide() {
   carouselContainer.scrollBy(-(width + gap), 0);
 }
@@ -64,11 +78,10 @@ function prevSlide() {
 prevBtn.addEventListener("click", prevSlide);
 nextBtn.addEventListener("click", nextSlide);
 
-/*-- event listener on the screen, to listen to "resize", running a function that keeps the container at it initial width with border and padding at all time" --*/
 window.addEventListener("resize", function () {
   width = carouselContainer.offsetWidth;
 });
 
-/*--Hamburger Menu --*/
+/*--HAMBURGER MENU--*/
 checkScreenSize();
 openMenu();

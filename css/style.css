@@ -284,6 +284,11 @@ footer {
   align-items: center;
 }
 
+.error-alert {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
 /*-- Post Specific --*/
 
 .post-specific,

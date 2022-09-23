@@ -5,6 +5,7 @@ import {
   openMenu,
 } from "./hamburger-menu.js";
 
-/*-- Hamburger Menu --*/
+/*-- HAMBURGER MENU --*/
+
 checkScreenSize();
 openMenu();

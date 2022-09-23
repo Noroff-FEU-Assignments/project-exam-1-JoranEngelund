@@ -1,4 +1,4 @@
-/*-- Import --*/
+/*-- IMPORT --*/
 
 import { loadingIndicator, stopLoadingIndicator } from "./loadingFunction.js";
 import {
@@ -8,7 +8,7 @@ import {
   openMenu,
 } from "./hamburger-menu.js";
 
-/*-- Fetch specific Posts --*/
+/*-- FETCH SPECIFIC POSTS --*/
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -18,6 +18,8 @@ const url =
   "https://life-api.engelund.site/wp-json/wp/v2/posts/" + id + "/?_embed";
 
 const detailContainer = document.querySelector(".post-specific");
+const errorContainer = document.querySelector(".error-alert");
+const commentSection = document.querySelector(".comment-section");
 
 async function fetchPostDetails() {
   try {
@@ -44,7 +46,7 @@ async function fetchPostDetails() {
                                   <div class="underline-headings"></div>
                                   `;
 
-    /*-- Modal --*/
+    /*-- MODAL --*/
 
     const modalContainer = document.querySelector(".modal-container");
     const modalImage = document.querySelector(".modale-image");
@@ -62,13 +64,30 @@ async function fetchPostDetails() {
     });
   } catch (error) {
     stopLoadingIndicator();
-    console.log(error);
+    commentSection.innerHTML = "";
+    errorContainer.innerHTML = `
+                            <p>
+                              It seems the post didn't get loaded correctly, please refresh the page or return at a later time!
+                            </p>
+                            <p>
+                              You can view other posts in the meantime
+                            </p>
+                            <div class="cta-container">
+                              <a class="cta" href="/posts.html">View Other Posts</a>
+                            </div>
+                            <p>
+                              If you have any inquieries, please use our contact form to get in touch
+                            </p>
+                            <div class="cta-container">
+                              <a class="cta" href="/contact.html">Contact Us<a>
+                            </div>`;
   }
 }
 
 fetchPostDetails();
 
-/*--Comment Section Validator--*/
+/*--COMMENT SECTION VALIDATION--*/
+
 const validationMessage = document.querySelector(".validation-message");
 const commentForm = document.querySelector(".comment-form");
 const inputName = document.querySelector("#name");
@@ -154,6 +173,7 @@ const commentFormSubmitter = (event) => {
 
 commentForm.addEventListener("submit", commentFormSubmitter);
 
-/*-- Hamburger Menu --*/
+/*-- HAMBURGER MENU --*/
+
 checkScreenSize();
 openMenu();

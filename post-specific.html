@@ -17,6 +17,22 @@
       src="https://kit.fontawesome.com/40442c7b29.js"
       crossorigin="anonymous"
     ></script>
+    <!-- Hotjar Tracking Code for https://lifebloggers.netlify.app/post-specific.html -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 3171496, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
     <title>Posts | Life</title>
   </head>
   <body>
@@ -46,67 +62,70 @@
     </header>
     <main>
       <section class="post-specific">
+        <div class="error-alert"></div>
         <div class="loadingIndicator"></div>
       </section>
-      <section class="comments">
-        <h2>Comments</h2>
-        <h3>No comments yet..</h3>
+      <section class="comment-section">
+        <section class="comments">
+          <h2>Comments</h2>
+          <h3>No comments yet..</h3>
+        </section>
+        <div class="underline-headings"></div>
+        <section class="form-container">
+          <div class="validation-message"></div>
+          <h2>Leave a Comment</h2>
+          <form
+            action="submit"
+            method="POST"
+            id="comment-form"
+            class="comment-form"
+          >
+            <div>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Name *"
+                class="form-input"
+              />
+              <div class="error-message name-error">
+                Must contain minimum 5 letters
+              </div>
+            </div>
+            <div>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email@address.com *"
+                class="form-input"
+              />
+              <div class="error-message email-error">
+                Please provide a valid email
+              </div>
+            </div>
+            <div>
+              <textarea
+                id="comment"
+                name="comment"
+                class="form-input"
+                placeholder="Type your comment... *"
+                rows="5"
+                cols="30"
+              ></textarea>
+              <div class="error-message comment-error">
+                Must contain minimum 1 character / Emoji
+              </div>
+            </div>
+            <div class="cta-container">
+              <button type="submit" class="cta submitButton">Send</button>
+            </div>
+          </form>
+        </section>
+        <div class="cta-container" id="view-other-posts">
+          <a href="/posts.html" class="cta">View other posts</a>
+        </div>
       </section>
-      <div class="underline-headings"></div>
-      <section class="form-container">
-        <div class="validation-message"></div>
-        <h2>Leave a Comment</h2>
-        <form
-          action="submit"
-          method="POST"
-          id="comment-form"
-          class="comment-form"
-        >
-          <div>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Name *"
-              class="form-input"
-            />
-            <div class="error-message name-error">
-              Must contain minimum 5 letters
-            </div>
-          </div>
-          <div>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email@address.com *"
-              class="form-input"
-            />
-            <div class="error-message email-error">
-              Please provide a valid email
-            </div>
-          </div>
-          <div>
-            <textarea
-              id="comment"
-              name="comment"
-              class="form-input"
-              placeholder="Type your comment... *"
-              rows="5"
-              cols="30"
-            ></textarea>
-            <div class="error-message comment-error">
-              Must contain minimum 1 character / Emoji
-            </div>
-          </div>
-          <div class="cta-container">
-            <button type="submit" class="cta submitButton">Send</button>
-          </div>
-        </form>
-      </section>
-      <div class="cta-container">
-        <a href="/posts.html" class="cta">View other posts</a>
-      </div>
     </main>
     <footer><a class="footer-copy" href="#">&copy; JayDesign</a></footer>
     <div class="modal-container">

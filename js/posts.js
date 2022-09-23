@@ -1,3 +1,5 @@
+/*-- IMPORT --*/
+
 import { stopLoadingIndicator } from "./loadingFunction.js";
 import {
   hamburgerMenuOpen,
@@ -8,9 +10,10 @@ import {
 
 /*-- API FETCH WITH DYNAMIC HTML --*/
 
-const errorAlert = document.querySelector(".error-alert");
+const errorContainer = document.querySelector(".error-alert");
 const postContainer = document.querySelector(".blog-posts");
 const viewMoreBtn = document.querySelector(".view-more-cta");
+const buttonsContainer = document.querySelector(".buttons-container");
 
 let pageNumber = 0;
 
@@ -46,13 +49,35 @@ async function fetchPosts() {
   } catch (error) {
     stopLoadingIndicator();
     console.log(error);
-    errorAlert.innerHTML = `<p>It seems the posts didn't get loaded correctly, please refresh the page or return at a later       time!</p>`;
+    buttonsContainer.innerHTML = "";
+    errorContainer.innerHTML = `
+                            <p>
+                              It seems the posts didn't get loaded correctly, please refresh the page or return at a later       time!
+                            </p>
+                            <p>
+                              If you have any inquieries, please use our contact form to get in touch
+                            </p>
+                            <div class="cta-container">
+                              <a class="cta" href="/contact.html">Contact Us<a>
+                            </div>`;
   }
 }
 fetchPosts();
 
 viewMoreBtn.addEventListener("click", fetchPosts);
 
-/*-- Hamburger Menu --*/
+/*-- SEARCH FUNCTION --*/
+async function searchSetup(url) {
+  console.log(url);
+}
+const searchBar = document.querySelector("#search");
+
+searchBar.oninput = function (event) {
+  let searchValue = event.target.value.trim().toLowerCase();
+  console.log(searchValue);
+};
+
+/*-- HAMBURGER MENU--*/
+
 checkScreenSize();
 openMenu();
