@@ -21,7 +21,6 @@ async function fetchPosts() {
     const response = await fetch(url);
     const posts = await response.json();
     stopLoadingIndicator();
-    console.log(posts);
     posts.forEach(function (post) {
       const blogImage = post._embedded?.["wp:featuredmedia"][0].source_url;
       const blogImageAlt = post._embedded?.["wp:featuredmedia"][0].alt_text;

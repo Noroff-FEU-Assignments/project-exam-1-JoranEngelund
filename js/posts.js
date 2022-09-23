@@ -25,7 +25,6 @@ async function fetchPosts() {
     const response = await fetch(url);
     const maximumPages = response.headers.get("x-wp-totalpages");
     const posts = await response.json();
-    console.log(posts);
     if (Number(maximumPages) === pageNumber) {
       viewMoreBtn.style.display = "none";
     }
@@ -48,7 +47,6 @@ async function fetchPosts() {
     });
   } catch (error) {
     stopLoadingIndicator();
-    console.log(error);
     buttonsContainer.innerHTML = "";
     errorContainer.innerHTML = `
                             <p>
@@ -67,15 +65,6 @@ fetchPosts();
 viewMoreBtn.addEventListener("click", fetchPosts);
 
 /*-- SEARCH FUNCTION --*/
-async function searchSetup(url) {
-  console.log(url);
-}
-const searchBar = document.querySelector("#search");
-
-searchBar.oninput = function (event) {
-  let searchValue = event.target.value.trim().toLowerCase();
-  console.log(searchValue);
-};
 
 /*-- HAMBURGER MENU--*/
 
