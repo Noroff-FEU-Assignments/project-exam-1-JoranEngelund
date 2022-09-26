@@ -315,6 +315,7 @@ footer {
 
 .post-copy {
   margin: auto 120px;
+  max-width: 68rem;
 }
 
 .comments h2,
