@@ -185,8 +185,7 @@ nav ul li a:hover {
 }
 
 /*-- CTA & Buttons --*/
-.cta,
-.view-more-cta {
+.cta {
   text-align: center;
   color: white;
   background-color: var(--main-cta-color);
@@ -197,13 +196,23 @@ nav ul li a:hover {
 }
 
 .view-more-cta {
-  font-size: 1em;
+  border: none;
+  background: none;
+  box-shadow: none;
+  color: black;
+  font-size: 2em;
+  text-decoration: underline;
 }
 
 .view-more-cta:hover {
-  background-color: var(--main-color);
+  text-align: center;
+  color: white;
+  background-color: var(--main-cta-color);
+  font-family: var(--body-font);
+  padding: 7px 44px;
+  box-shadow: 0px 3px 6px black;
   border: 2px solid var(--main-cta-color);
-  color: black;
+  text-decoration: none;
 }
 
 .view-less-cta {
