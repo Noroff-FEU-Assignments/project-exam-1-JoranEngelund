@@ -25,7 +25,6 @@ async function fetchPostDetails() {
   try {
     const response = await fetch(url);
     const details = await response.json();
-    console.log(details);
     stopLoadingIndicator();
 
     const metaDescription = document
