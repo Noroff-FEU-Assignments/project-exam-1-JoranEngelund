@@ -210,9 +210,8 @@ nav ul li a:hover {
   background-color: var(--main-cta-color);
   font-family: var(--body-font);
   padding: 7px 44px;
-  box-shadow: 0px 3px 6px black;
-  border: 2px solid var(--main-cta-color);
-  text-decoration: none;
+  box-shadow: inset 0px 3px 6px black;
+  border: none;
 }
 
 .view-less-cta {
@@ -323,6 +322,7 @@ footer {
 }
 
 .post-copy {
+  font-family: "josefin-slab";
   margin: auto 120px;
   max-width: 68rem;
 }
@@ -367,14 +367,23 @@ footer {
   box-shadow: 0 3px 6px black;
   width: 265px;
   font-size: 1.1em;
+  padding: 7px;
+}
+
+.form-label {
+  margin: auto;
+  font-family: var(--body-font);
+  font-size: 1.2em;
 }
 
 ::placeholder {
   color: white;
+  opacity: 50%;
   font-family: var(--body-font);
 }
 
 .error-message {
+  text-align: end;
   margin: 10px auto;
   font-family: var(--body-font);
 }

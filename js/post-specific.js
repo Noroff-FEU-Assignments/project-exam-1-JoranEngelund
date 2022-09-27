@@ -25,6 +25,7 @@ async function fetchPostDetails() {
   try {
     const response = await fetch(url);
     const details = await response.json();
+    console.log(details);
     stopLoadingIndicator();
 
     const metaDescription = document
@@ -89,7 +90,7 @@ fetchPostDetails();
 /*--COMMENT SECTION VALIDATION--*/
 
 const validationMessage = document.querySelector(".validation-message");
-const commentForm = document.querySelector(".comment-form");
+const commentForm = document.querySelector(".contact-form");
 const inputName = document.querySelector("#name");
 const nameError = document.querySelector(".name-error");
 const email = document.querySelector("#email");
@@ -163,7 +164,8 @@ const commentFormSubmitter = (event) => {
   event.preventDefault();
 
   if (validForm === true) {
-    validationMessage.innerHTML = `<p>Your comment has been sent!</p> <p>Our administrators will validate it before it gets posted</p>`;
+    validationMessage.innerHTML = `<p>Your comment has been sent!</p> <p>Our administrators will validate it before it gets posted</p>
+    <div class="underline-headings"></div>`;
   } else {
     validationMessage.innerHTML = "";
   }

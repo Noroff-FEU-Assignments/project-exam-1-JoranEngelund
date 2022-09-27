@@ -27,7 +27,7 @@ async function fetchPosts() {
       carousel.innerHTML += `
                               <div class="slider-card">
                                 <a href="/post-specific.html?id=${post.id}"><img class="post-image" src="${blogImage}" alt="${blogImageAlt}"/></a>
-                                <h2>${post.title.rendered}</h2>
+                                <a href="/post-specific.html?id=${post.id}"><h2>${post.title.rendered}</h2></a>
                                 <h3>${post.excerpt.rendered}</h3>
                                 <div class="cta-container">
                                   <a class="cta" href="/post-specific.html?id=${post.id}">View Post</a>
