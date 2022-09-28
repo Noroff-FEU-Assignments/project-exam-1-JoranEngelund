@@ -66,53 +66,6 @@ viewMoreBtn.addEventListener("click", fetchPosts);
 
 /*-- SEARCH FUNCTION --*/
 
-async function searchCall() {
-  function renderPosts(post) {
-    postContainer.innerHTML = "";
-    searchData.filter(function (post) {
-      const blogImage = post._embedded?.["wp:featuredmedia"][0].source_url;
-      const blogImageAlt = post._embedded?.["wp:featuredmedia"][0].alt_text;
-      searchContainer.innerHTML += `<div class="post-card">
-                              <a href="/post-specific.html?id=${post.id}">
-                                <img class="post-image" src="${blogImage}" alt="${blogImageAlt}"/>
-                              </a>
-                              <h2>${post.title.rendered}</h2>
-                              <h3>${post.excerpt.rendered}</h3>
-                              <div class="cta-container">
-                                <a class="cta" href="/post-specific.html?id=${post.id}">View Post</a>
-                              </div>
-                            </div>`;
-    });
-  }
-
-  const searchContainer = document.querySelector(".search-container");
-  let searchValue = "";
-  const searchBar = document.querySelector("#search");
-
-  searchBar.oninput = function (event) {
-    searchValue = event.target.value.trim().toLowerCase();
-    console.log(searchUrl + searchValue);
-    if ((searchValue = "")) {
-      return fetchPosts();
-    }
-    const filteredPosts = searchData.filter(function (post) {
-      if (post.title.rendered.toLowerCase().startsWith(searchValue)) {
-        return true;
-      } else {
-        return false;
-      }
-    });
-    renderPosts(filteredPosts);
-  };
-
-  let searchUrl = `https://life-api.engelund.site/wp-json/wp/v2/posts?search=${searchValue}`;
-
-  const response = await fetch(searchUrl);
-  const searchData = await response.json();
-  console.log(searchData);
-}
-searchCall();
-
 /*-- HAMBURGER MENU--*/
 
 checkScreenSize();
