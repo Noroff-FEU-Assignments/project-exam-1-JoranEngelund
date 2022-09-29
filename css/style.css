@@ -4,10 +4,32 @@
   --main-color: #ffffe5;
   --main-cta-color: #415d5d;
   --header-font: "chennai";
-  --body-font: "chennai";
+  --body-font: "ofelia-display";
 }
 
 /*-- Global Styling --*/
+
+body, header, ul, footer, .logo-container, .index-main, .slider-card, .carouselNavigation, .search-container, .blog-posts, .buttons-container, .error-alert, .post-specific,
+.comments, .comment-form,
+.contact-form {
+  display: flex;
+}
+
+body, .index-main, .slider-card, .modal-container, .buttons-container, .error-alert, .post-specific,
+.comments, .comment-form,
+.contact-form  {
+  flex-direction: column;
+}
+
+nav ul li a, .page-headings, .underline-headings, .carousel, .body-copy, .cta, .view-more-cta:hover, .cta-container, .post-card, .error-alert, .post-specific,
+.comments, .form-container h2,
+.comment-form, .submitButton:disabled, .validation-message {
+  text-align: center;
+}
+
+header, .carousel-posts {
+  display: grid;
+}
 
 nav,
 ul li,
@@ -18,18 +40,17 @@ h3 {
   font-weight: 100;
 }
 
-h3,
 p {
   font-family: var(--body-font);
   font-weight: 100;
 }
 
+
+
 body {
   margin: 0;
   min-height: 100vh;
   width: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 body,
@@ -38,8 +59,6 @@ header {
 }
 
 header {
-  display: flex;
-  display: grid;
   grid-template-areas: "logo nav nav";
   border-bottom: 3px solid var(--main-cta-color);
 }
@@ -51,7 +70,6 @@ nav {
 }
 
 ul {
-  display: flex;
   gap: 25px;
   list-style: none;
 }
@@ -63,7 +81,6 @@ a {
 }
 
 .logo-container {
-  display: flex;
   grid-area: logo;
 }
 
@@ -72,7 +89,6 @@ a {
 }
 
 nav ul li a {
-  text-align: center;
   padding: 7px 20px;
 }
 
@@ -84,7 +100,6 @@ nav ul li a:hover {
 }
 
 .page-headings {
-  text-align: center;
   font-size: 3em;
   margin: 40px auto 0 auto;
 }
@@ -93,22 +108,18 @@ nav ul li a:hover {
   border-bottom: 3px solid var(--main-cta-color);
   width: 26%;
   margin: auto;
-  text-align: center;
 }
 
 /*-- Index --*/
 
 .index-main {
-  display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 
 .carousel {
   width: 100%;
   max-width: 964px;
-  text-align: center;
   margin-top: 25px;
 }
 
@@ -123,7 +134,6 @@ nav ul li a:hover {
 }
 
 .carousel-posts {
-  display: grid;
   grid-gap: 16px;
   grid-auto-flow: column;
   margin: auto;
@@ -133,13 +143,10 @@ nav ul li a:hover {
 .slider-card {
   width: 228px;
   height: 474px;
-  display: flex;
-  flex-direction: column;
 }
 
 .carouselNavigation {
   margin: 25px auto auto auto;
-  display: flex;
   flex-direction: row;
   gap: 159px;
 }
@@ -150,13 +157,21 @@ nav ul li a:hover {
   margin: 10px auto;
 }
 
+.carousel-info p {
+  font-family: var(--header-font);
+}
+
 .body-copy {
   font-size: 1.5em;
-  text-align: center;
   margin: 5% 10%;
 }
 
+.slider-card h3 p {
+  font-family: var(--header-font);
+}
+
 /*-- Loader --*/
+
 .loadingIndicator {
   width: 100px;
   height: 100px;
@@ -172,7 +187,6 @@ nav ul li a:hover {
 .modal-container {
   display: none;
   position: fixed;
-  flex-direction: column;
   inset: 0;
   align-items: center;
   padding-top: 33px;
@@ -186,10 +200,9 @@ nav ul li a:hover {
 
 /*-- CTA & Buttons --*/
 .cta {
-  text-align: center;
   color: white;
   background-color: var(--main-cta-color);
-  font-family: var(--body-font);
+  font-family: var(--header-font);
   padding: 7px 44px;
   box-shadow: 0px 3px 6px black;
   border: 2px solid var(--main-cta-color);
@@ -205,10 +218,9 @@ nav ul li a:hover {
 }
 
 .view-more-cta:hover {
-  text-align: center;
   color: white;
   background-color: var(--main-cta-color);
-  font-family: var(--body-font);
+  font-family: var(--header-font);
   padding: 7px 44px;
   box-shadow: inset 0px 3px 6px black;
   border: none;
@@ -229,7 +241,6 @@ nav ul li a:hover {
 }
 
 .cta-container {
-  text-align: center;
   margin-bottom: 30px;
   margin-top: auto;
 }
@@ -241,7 +252,6 @@ button {
 /*-- Footer --*/
 
 footer {
-  display: flex;
   justify-content: center;
   margin-top: auto;
   border-top: 3px solid var(--main-cta-color);
@@ -256,7 +266,6 @@ footer {
 /*-- blog posts --*/
 
 .search-container {
-  display: flex;
   justify-content: center;
   margin: 20px auto;
 }
@@ -277,14 +286,12 @@ footer {
 }
 
 .blog-posts {
-  display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 30px;
 }
 
 .post-card {
-  text-align: center;
   margin: 20px;
 }
 
@@ -293,29 +300,13 @@ footer {
 }
 
 .buttons-container {
-  display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
-.error-alert {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
 
 /*-- Post Specific --*/
 
-.post-specific,
-.comments {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
 .post-specific {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   margin: 40px auto;
 }
@@ -341,19 +332,8 @@ footer {
 
 /*-- Form Styling --*/
 
-.form-container h2,
-.comment-form {
-  text-align: center;
-}
-
 .form-container {
   margin-bottom: 20px;
-}
-
-.comment-form,
-.contact-form {
-  display: flex;
-  flex-direction: column;
 }
 
 .comment-form {
@@ -378,35 +358,33 @@ footer {
 
 .form-label {
   margin: auto;
-  font-family: var(--body-font);
+  font-family: var(--header-font);
   font-size: 1.2em;
 }
 
 ::placeholder {
   color: white;
   opacity: 50%;
-  font-family: var(--body-font);
+  font-family: var(--header-font);
 }
 
 .error-message {
   text-align: end;
   margin: 10px auto;
-  font-family: var(--body-font);
+  font-family: var(--header-font);
 }
 
 .submitButton:disabled {
-  text-align: center;
   opacity: 50%;
   color: black;
   background-color: var(--main-color);
-  font-family: var(--body-font);
+  font-family: var(--header-font);
   padding: 7px 44px;
   box-shadow: 0px 3px 6px black;
   border: var(--main-cta-color);
 }
 
 .validation-message {
-  text-align: center;
   font-size: 1.5em;
 }
 
@@ -468,6 +446,7 @@ footer {
     top: 130px;
     height: 260px;
   }
+
 
   .hamburger-open {
     display: flex;
