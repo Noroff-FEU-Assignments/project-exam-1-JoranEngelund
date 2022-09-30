@@ -2,8 +2,8 @@ export const hamburgerMenuOpen = document.querySelector(".hamburger-open");
 export const navigation = document.querySelector("ul");
 
 export function checkScreenSize() {
-  const ScreenWidth = window.innerWidth;
-  if (ScreenWidth <= 764) {
+  const screenWidth = window.innerWidth;
+  if (screenWidth <= 764) {
     navigation.style.display = "none";
   }
 }
