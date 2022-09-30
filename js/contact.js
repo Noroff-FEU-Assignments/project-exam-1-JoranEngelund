@@ -46,7 +46,7 @@ const formValidation = () => {
     nameError.innerHTML = "";
   } else {
     validForm = false;
-    nameError.innerHTML = "Must contain minimum 5 letter";
+    nameError.innerHTML = "Must contain minimum 5 characters";
   }
   if (emailValidator(email.value) === true) {
     validForm = true;

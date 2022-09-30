@@ -56,6 +56,7 @@ async function fetchPostDetails() {
     postImage.addEventListener("click", function () {
       modalContainer.style.display = "flex";
       modalImage.src = this.src;
+      modalImage.alt = this.alt;
     });
 
     modalContainer.addEventListener("click", function (event) {
