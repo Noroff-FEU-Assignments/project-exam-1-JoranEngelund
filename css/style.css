@@ -391,11 +391,6 @@ footer {
   font-size: 1em;
 }
 
-#search-label {
-  right: 239%;
-  position: absolute;
-}
-
 .search-field {
   border-radius: 2px;
   padding: 14px 55px;
