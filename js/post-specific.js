@@ -115,7 +115,7 @@ const formValidation = () => {
     emailError.innerHTML = "";
   } else {
     validForm = false;
-    emailError = "Please provide a valid email";
+    emailError.innerHTML = "Please provide a valid email";
   }
   if (lengthChecker(comment.value, 0) === true) {
     validForm = true;
