@@ -1,67 +1,67 @@
-## Project Exam 1
+# Life 
 
-## Goal
+![life_bloggers](https://user-images.githubusercontent.com/56642663/195361793-db2f8784-3be5-4a05-8cd3-be011ea20793.jpg)
 
-To put into practice the skills learned over your first year of studies.
+Life - A blogging platform for people who want to share their life experiences, memories, tips and tricks. The website was developed during the final project exam during the 1st year in Front-End Development studies at Noroff Vocational School of Media and Technology
 
-## Brief
-You have been tasked with creating a blog site. You can choose the design and topics covered on the blog, but it should have at least the following pages:
--	Home page
--	About page
--	List of blog posts
--	Blog post specific pages
--	Contact page.
+## Description
 
-### Home Page
-The home page should have a ‘Latest Posts’ section which uses a carousel (slider) for users to click to view more posts. For example, by default the user can see four posts, then they can click an arrow on the right to view the next four posts, and click it again to view the next four posts. The user can also click back to view results they had previously seen. This must be implemented for desktop at least, but if you want a simpler layout for mobile, you can change it from being in a carousel.
+The project is about implementing the knowledge learned across different courses such as Webdesign, Web communication and technologies, HTML & CSS, JavaScript, Interaction Design and Content Management Systems. The project is to design a prototype for the webdesign and develop a fully functional and responsive webpage.
 
-### Blog Page
+The site development was tasked to implement use of WordPress REST API, Modal image functionality, Carousel functionality etc... The design phase of the project emphasises good UI and UX design and the development phase emphasises semantically and neat html, CSS that follows the DRY principle, WCAG compliance in accordance to accessibility and SEO optimilization. The site should also be responsive, attractive, easy to use on all screen size and easy to navigate
 
-The blog posts page should show the first 10 blogs, and the user should click to view more results which then show underneath the first 10 blogs.
+## Design Process:
+- [Wireframe built with InvisionApp](https://www.invisionapp.com/)
+- Prototype built with Adobe Xd
 
-### Blog Specific Page
+## Built With
 
-The content of the blog specific page should be dynamically built using a query string parameter based on whatever link the user clicked. The title of the blog specific page should change based on the blog that has been clicked on e.g. “My Blog | An Article I Wrote”.
+- ```HTML5```
+- ```CSS3```
+- ```JavaScript```
+- ```WordPress REST API```
+- ```Web Accessibility```
+- ```SEO Optimilization```
 
-If images on the blog post page are clicked, a modal should appear giving the user a bigger view of that image. Clicking outside the image should hide the modal.
+## Project Grade:
+- ```N/A```
 
-### Contact page
+## Getting Started
 
-Create a contact us page, there should be 4 textboxes on this page.
--	Name (Should be more than 5 characters long)
--	Email address (Must be a valid email address)
--	Subject (Should be more than 15 characters long)
--	Message content (Should be more than 25 characters long)
+### Installing
 
-Please use JavaScript for validation, show error messages if the values in the textboxes do not meet the requirements.
 
-### WordPress
+1. Clone the repo:
 
-The content for your website will be stored on a WordPress installation used as a Headless CMS. It’s important to note that we are only using WordPress to provide an API and add content for the blog. You should not submit a link to a WordPress site, but build your website using HTML, CSS and JavaScript and making a call to the WordPress REST API to fetch the data. 
+```bash
+git clone git@github.com:Noroff-FEU-Assignments/project-exam-1-JoranEngelund.git
+```
 
-The project has two aspects:
--	API from your WordPress installation
--	Your website built with HTML, CSS and JavaScript
+2. Install the dependencies:
 
-You will need to add at least 12 blogs for your website. You can use lorem ipsum for paragraphs if you need, but headings, images etc. should all make sense.
+```
+GitHub Desktop - https://desktop.github.com/
+Code Editor (example: Visual Studio Code)
+Live Server extension in Visual Studio Code
+```
 
-Note that this is an exam, and therefore tutor support will be limited as per the study plan.
+### Running
 
-## Level 1 Process
+To run the app, run the following commands:
 
-1.	Decide on the theme for the blog you’re going to make
-2.	Create a prototype of the website
-3.	Install WordPress on your web host and add the blogs on the admin panel. 
-4.	Use the GitHub repo created by GitHub Classroom for your files and deploy to Netlify
-5.	Build your website using HTML, CSS and JavaScript making a call to the WordPress REST API to fetch your data.
-6.	Install Hotjar on your website.
-7.	Ask users to test your website, and adjust based on their feedback and any insights from Hotjar.
-8.	Write a report documenting your project (template provided in this repository).
-9.	Submit your report as a PDF and a link to both your Netlify deployment and your GitHub repo.
- 
-## Level 2 Process (optional)
+```bash
+- Clone the repository in GitHub Desktop and open with Visual Studio Code from the menu (CTRL + SHIFT + A)
+- In Visual studio code, open the explorer menu on the right side (CTRL + SHIFT + E)
+- Run Live Server by right-clicking on a desired html file (ALT + L -> ALT + O)
+```
 
-1.	You can try adding a sort, filter, or search to the blog posts page allowing users to find the blog post more easily that they’re looking for. 
-2.	Post the data from the contact form to WordPress so you have the details saved.
-3.	Allow users to submit comments on a blog post, and post this data to WordPress
+## Contact
+
+[Mail](mailto:joranengelund@hotmail.com)
+
+[Instagram](https://www.instagram.com/joranengelund/)
+
+[Facebook](https://www.facebook.com/joranengelund)
+
+[LinkedIn](https://www.linkedin.com/in/j%C3%B8ran-engelund-937649252/)
 
