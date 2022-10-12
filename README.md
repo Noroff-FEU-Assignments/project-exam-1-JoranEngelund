@@ -8,7 +8,7 @@ Life - A blogging platform for people who want to share their life experiences, 
 
 The project is about implementing the knowledge learned across different courses such as Webdesign, Web communication and technologies, HTML & CSS, JavaScript, Interaction Design and Content Management Systems. The project is to design a prototype for the webdesign and develop a fully functional and responsive webpage.
 
-The site development was tasked to implement use of WordPress REST API, Modal image functionality, Carousel functionality etc... The design phase of the project emphasises good UI and UX design and the development phase emphasises semantically and neat html, CSS that follows the DRY principle, WCAG compliance in accordance to accessibility and SEO optimilization. The site should also be responsive, attractive, easy to use on all screen size and easy to navigate
+The site development was tasked to implement use of WordPress REST API, Modal image functionality, Carousel functionality, form-validation with the use of JavaScript etc... The design phase of the project emphasises good UI and UX design and the development phase emphasises semantically and neat html, CSS that follows the DRY principle, WCAG compliance in accordance to accessibility and SEO optimilization. The site should also be responsive, attractive, easy to use on all screen size and easy to navigate
 
 ## Design Process:
 - [Wireframe built with InvisionApp](https://www.invisionapp.com/)
