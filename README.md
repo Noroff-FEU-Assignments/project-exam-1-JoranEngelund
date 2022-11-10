@@ -24,7 +24,7 @@ The site development was tasked to implement use of WordPress REST API, Modal im
 - ```SEO Optimilization```
 
 ## Project Grade:
-- ```N/A```
+- ```A```
 
 ## Getting Started
 
